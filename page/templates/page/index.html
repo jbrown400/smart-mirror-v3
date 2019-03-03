@@ -1,9 +1,12 @@
 {% load static %}
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="{% static 'page/styles.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'page/styles.css' %}" />
+        <script src="{% static 'page/time.js' %}"></script>
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     </head>
-    <body>
+    <body onload="getTime()">
         <h1>Hello, world!</h1>
+        <h3 id="clock">clock</h3>
     </body>
-</html>g
+</html>
