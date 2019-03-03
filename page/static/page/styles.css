@@ -1,7 +1,11 @@
 body {
     background-color: black;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 100;
+    font-variant: small-caps
 }
 
-h1, h3 {
-    color: white;
+#clock {
+    font-size: 50pt;
 }

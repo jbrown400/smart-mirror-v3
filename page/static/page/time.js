@@ -1,12 +1,18 @@
+var daysOfTheWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+var monthsOfTheYear = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"];
+
 function getTime() {
 	var today = new Date();
+	var dow = daysOfTheWeek[today.getDay()];
+	var month = monthsOfTheYear[today.getMonth()];
+	var day = today.getDate();
 	var h = today.getHours();
 	var m = today.getMinutes();
 
 	h = (h < 10) ? "0" + h : h;
 	m = (m < 10) ? "0" + m : m;
 
-	$("#clock").html(h + ":" + m);
+	$("#clock").html(dow + "   " + month + " " + day + " " + h + ":" + m);
 
 	setTimeout(getTime, 1000);
 }
