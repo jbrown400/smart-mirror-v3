@@ -23,10 +23,18 @@ function getWeather() {
 }
 
 /**
- * 
+ * Returns a javascript object containing the weather API response.
  * @param {*} city The city for which you want weather data.
  */
 function getCurrentWeatherConditions(city) {
+
+}
+
+/**
+ * Sets the weather fields based on the relevant data returned by the weather API.
+ * @param {*} currentWeather A javascript object containing the weather API response.
+ */
+function setCurrentWeatherConditions(currentWeather) {
 
 }
 
