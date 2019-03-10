@@ -6,11 +6,23 @@
         <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     </head>
     <body onload="getTime()">
-        <div id="clock">clock</div>
-        <div id="calendar">Calendar</div>
-        <div id="weather">
-            Weather<br>
-            You need an umbrella
+        <div id="leftSide" class="pageColumn pageColumnLeft">
+            <div id="weather" class="featureItem">
+                Weather<br>
+                You need an umbrella
+            </div>
+            <div id="calendar" class="featureItem">
+                Calendar
+            </div>
+            <div id="toDoList" class="featureItem">
+                Tasks
+            </div>
+        </div>
+        <div id="rightSide" class="pageColumn pageColumnRight">
+            <div class="featureItem">
+                <div id="clockTime"></div>
+                <div id="clockDate"></div>
+            </div>
         </div>
     </body>
 </html>

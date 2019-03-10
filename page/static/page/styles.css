@@ -3,8 +3,65 @@ body {
     color: white;
     font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
     font-weight: 100;
+    display: flex;
+    padding: 3%;
 }
 
-#clock {
+/* The left and right columns of the page */
+.pageColumn {
+    display: flex;
+    flex-basis: 50%;
+}
+
+.pageColumnRight {
+    text-align: end
+}
+
+.pageColumnLeft {
+    text-align: start;
+}
+
+
+/* Each individual feature like the clock, calendar, etc. */
+.featureItem {
+    flex-basis: 20%;
+}
+
+#rightSide {
+    flex-basis: 50%;
+    flex-direction: column;
+    background-color: grey;
+}
+
+#leftSide {
+    flex-direction: column;
+    background-color: orange;
+}
+
+#clockTime {
     font-size: 50pt;
+}
+
+#clockDate {
+    font-size: 25pt;
+}
+
+/* #clockDate, #clockTime {
+    width: 50%;
+    background-color: orange;
+    padding: 0%;
+    margin: 0%;
+} */
+
+
+#calendar {
+    background-color: blue;
+}
+
+#weather {
+    background-color: green;
+}
+
+#toDoList {
+    background-color: red;
 }

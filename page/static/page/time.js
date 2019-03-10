@@ -12,7 +12,7 @@ function getTime() {
 	h = (h < 10) ? "0" + h : h;
 	m = (m < 10) ? "0" + m : m;
 
-	$("#clock").html(dow + "   " + month + " " + day + " " + h + ":" + m);
-
+	$("#clockTime").html(h + ":" + m);
+	$("#clockDate").html(dow + " " + month + " " + day);
 	setTimeout(getTime, 1000);
 }
