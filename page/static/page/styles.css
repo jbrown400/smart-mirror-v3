@@ -1,9 +1,8 @@
 body {
     background-color: black;
     color: white;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
     font-weight: 100;
-    font-variant: small-caps
 }
 
 #clock {
