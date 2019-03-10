@@ -1,6 +1,8 @@
 var daysOfTheWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 var monthsOfTheYear = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"];
 
+var weatherAPIURL = "http://api.openweathermap.org/data/2.5/weather?zip=72719,us&APPID=" + WEATHER_KEY
+
 function getTime() {
 	var today = new Date();
 	var dow = daysOfTheWeek[today.getDay()];
@@ -17,9 +19,13 @@ function getTime() {
 	setTimeout(getTime, 1000);
 }
 
+/**
+ * Handles getting and setting the current weather conditions
+ */
 function getWeather() {
 	var city = "";
-	getCurrentWeatherConditions(city);
+	var currentWeather = getCurrentWeatherConditions(city);
+	setCurrentWeatherConditions(currentWeather);
 }
 
 /**
@@ -27,7 +33,18 @@ function getWeather() {
  * @param {*} city The city for which you want weather data.
  */
 function getCurrentWeatherConditions(city) {
+	$.ajax({
+		url: weatherAPIURL,
+		type: "GET",
+		dataType: JSON,
+		timeout: 5000,
+		success: function(result) {
 
+		},
+		error: function(error) {
+
+		}
+	})
 }
 
 /**
@@ -37,7 +54,3 @@ function getCurrentWeatherConditions(city) {
 function setCurrentWeatherConditions(currentWeather) {
 
 }
-
-// function getWeatherForecast(city) {
-
-// }
