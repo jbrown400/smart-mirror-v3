@@ -16,3 +16,20 @@ function getTime() {
 	$("#clockDate").html(dow + " " + month + " " + day);
 	setTimeout(getTime, 1000);
 }
+
+function getWeather() {
+	var city = "";
+	getCurrentWeatherConditions(city);
+}
+
+/**
+ * 
+ * @param {*} city The city for which you want weather data.
+ */
+function getCurrentWeatherConditions(city) {
+
+}
+
+// function getWeatherForecast(city) {
+
+// }
