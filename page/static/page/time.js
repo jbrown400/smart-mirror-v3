@@ -1,7 +1,7 @@
 var daysOfTheWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 var monthsOfTheYear = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"];
 
-var weatherAPIURL = "http://api.openweathermap.org/data/2.5/weather?zip=72719,us&APPID=" + WEATHER_KEY
+var weatherAPIURL = "http://api.openweathermap.org/data/2.5/weather?zip=72719,us&units=imperial&APPID=" + WEATHER_KEY
 
 function getTime() {
 	var today = new Date();
@@ -25,7 +25,6 @@ function getTime() {
 function getWeather() {
 	var city = "";
 	var currentWeather = getCurrentWeatherConditions(city);
-	setCurrentWeatherConditions(currentWeather);
 }
 
 /**
@@ -36,13 +35,14 @@ function getCurrentWeatherConditions(city) {
 	$.ajax({
 		url: weatherAPIURL,
 		type: "GET",
-		dataType: JSON,
+		dataType: 'json',
 		timeout: 5000,
-		success: function(result) {
-
+		success: function(result, status) {
+			setCurrentWeatherConditions(result);
 		},
 		error: function(error) {
-
+			console.log("Error: " + error);
+			$("#weather").html("Error");
 		}
 	})
 }
@@ -52,5 +52,7 @@ function getCurrentWeatherConditions(city) {
  * @param {*} currentWeather A javascript object containing the weather API response.
  */
 function setCurrentWeatherConditions(currentWeather) {
-
+	console.log(currentWeather.weather);
+	$("#temp").html(currentWeather.main.temp);
 }
+
