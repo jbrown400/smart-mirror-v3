@@ -11,13 +11,30 @@ function getCalendarData() {
         url: calendarAPIURL,
         dataType: 'json',
         timeout: 5000,
-        success: function(i, item) {
+        success: function(data, status) {
             console.log("Success")
-            console.log(i);
+            $.each(data.items, function(eventNumber, event) {
+                setCalendarEvents(eventNumber, event);
+            });
         },
         error: function(error) {
             $("#calendar").html("Error getting calendar events.");
             console.log("Error: " + error);
         }
     });
+}
+
+function setCalendarEvents(eventNumber, event) {
+    var tmp = "#event" + eventNumber;
+    // Have to check if "dateTime" or "date" is the varaible. dateTime is for events with specific times while
+    //  date is for all day events.
+    if(event.start.dateTime) {
+        var simpleDate = new Date(Date.parse(event.start.dateTime));
+        var startTime = event.start.dateTime.slice(11, 16);
+    } else {
+        var simpleDate = new Date(Date.parse(event.start.date));
+        var startTime = "All Day"
+    }
+    
+    $(tmp).html(startTime + " " + monthsOfTheYear[simpleDate.getMonth()] + "  " + simpleDate.getDate() + " : " + event.summary);
 }
