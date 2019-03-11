@@ -1,7 +1,7 @@
 body {
     background-color: black;
     color: white;
-    font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
     font-weight: 100;
     display: flex;
     padding: 3%;
@@ -24,26 +24,25 @@ body {
 
 /* Each individual feature like the clock, calendar, etc. */
 .featureItem {
-    flex-basis: 20%;
+    flex-basis: 10%;
+    padding-bottom: 5%
 }
 
 #rightSide {
     flex-basis: 50%;
     flex-direction: column;
-    background-color: grey;
 }
 
 #leftSide {
     flex-direction: column;
-    background-color: orange;
 }
 
 #clockTime {
-    font-size: 50pt;
+    font-size: 7rem;
 }
 
 #clockDate {
-    font-size: 25pt;
+    font-size: 3rem;
 }
 
 /* #clockDate, #clockTime {
@@ -53,19 +52,14 @@ body {
     margin: 0%;
 } */
 
+#weather {}
 
-#calendar {
-    background-color: blue;
+#temp {
+    font-size: 7rem;
 }
 
-.event {
-    
-}
+#calendar {}
 
-#weather {
-    background-color: green;
-}
+.event {}
 
-#toDoList {
-    background-color: red;
-}
+#toDoList {}

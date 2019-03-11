@@ -36,7 +36,7 @@ function setCurrentWeatherConditions(currentWeather) {
 	console.log(currentWeather.weather);
 	$("#temp").html(Math.round(currentWeather.main.temp) + "&#176;");
 	$("#temp_min_max").html(
-			Math.round(currentWeather.main.temp_min) + "&#176; / " +
+			Math.round(currentWeather.main.temp_min) + "&#176;/ " +
 			Math.round(currentWeather.main.temp_max) + "&#176;"
 		);
 }
