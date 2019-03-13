@@ -1,7 +1,8 @@
 var calDate = new Date();
+var maxResults = 4;
 
 var calendarAPIURL = "https://www.googleapis.com/calendar/v3/calendars/justin.brown400@gmail.com/events?" + 
-        "orderBy=starttime&singleEvents=true&alt=json&maxResults=10" +
+        "orderBy=starttime&singleEvents=true&alt=json&maxResults=" + maxResults +
         "&timeMin=" + calDate.getFullYear() + "-" + (calDate.getMonth() + 1) + "-" + calDate.getDate() + "T" + calDate.getHours()  + "%3A00%3A00-07%3A00" + 
         "&key=" + CALENDAR_KEY + "";
 

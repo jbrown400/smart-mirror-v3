@@ -5,7 +5,7 @@ var weatherAPIURL = "http://api.openweathermap.org/data/2.5/weather?zip=72719,us
  */
 function getWeather() {
 	var city = "";
-	var currentWeather = getCurrentWeatherConditions(city);
+	getCurrentWeatherConditions(city);
 }
 
 /**
@@ -38,5 +38,14 @@ function setCurrentWeatherConditions(currentWeather) {
 	$("#temp_min_max").html(
 			Math.round(currentWeather.main.temp_min) + "&#176;/ " +
 			Math.round(currentWeather.main.temp_max) + "&#176;"
-		);
+        );
+}
+
+function getWeatherForecast() {
+
+}
+
+
+function setWeatherForecast() {
+    
 }
