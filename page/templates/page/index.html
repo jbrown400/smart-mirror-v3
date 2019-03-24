@@ -2,6 +2,8 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="{% static 'page/styles.css' %}" />
+        <script type="text/javascript" src="{% static 'page/main.js' %}"></script>
+        <script type="text/javascript" src="{% static 'page/assistant.js' %}"></script>
         <script type="text/javascript" src="{% static 'page/keys.js' %}"></script>
         <script type="text/javascript" src="{% static 'page/time.js' %}"></script>
         <script type="text/javascript" src="{% static 'page/weather.js' %}"></script>
@@ -15,6 +17,10 @@
                 <div id="temp"></div>
                 <div id="temp_min_max"></div>
                 <div id="umbrella_or_shades"></div>
+
+
+                <input type="file" accept="audio/*" capture id="recorder">
+                <audio id="player" controls></audio>
             </div>
             <div id="calendar" class="featureItem">
                 <div class="event" id="event0"></div>

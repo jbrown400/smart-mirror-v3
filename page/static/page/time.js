@@ -1,11 +1,6 @@
 var daysOfTheWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 var monthsOfTheYear = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"];
 
-function loadData() {
-	getTime();
-	getCalendarData();
-	getWeather();
-}
 
 function getTime() {
 	var today = new Date();
